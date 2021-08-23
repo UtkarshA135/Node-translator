@@ -58,7 +58,7 @@ but also other languages like Hindi, Tamil, etc. and store it in our cache.
      }) 
 
 - Assertion style used - ``` chai.should() ```
-# Cache Datbase Schema 
+# Cache Database Schema 
 - Used ``` node-cache ``` which stores data as key-value pair
 - For key , I made a JavaScipt Object :
  ```
