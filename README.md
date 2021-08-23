@@ -3,7 +3,7 @@
 - Also implemented smart pre-caching. This means we assume that if a user translates a text into Kannada, he is 
 likely to also translate the same text to Hindi. Therefore we want to not only request Kannada from the external service 
 but also other languages like Hindi, Tamil, etc. and store it in our cache.
-
+- Wrote a couple of tests in mocha and chai to test the RESTful server
 # Design Decisions 
 - Used Bing Translation API over Google Translations , since the latter asked for a billing .
 - Used Node cache over redis , since the latter asked for Redis cloud billing .
