@@ -31,8 +31,8 @@ but also other languages like Hindi, Tamil, etc. and store it in our cache.
 - Just run ``` npm test ``` to test the API.
 - Two types of test :
   One where input is correct -
-  describe('GET /translate/:word/:language',()=>{
-    ```it("It should GET the translated word of the target language",(done)=>{
+   ``` describe('GET /translate/:word/:language',()=>{
+    it("It should GET the translated word of the target language",(done)=>{
         chai.request(server)
         .get('/translate/Hello/hi') //  word : Hello ; totranslate : hindi(hi)
         .end((err,response)=>{
@@ -43,6 +43,7 @@ but also other languages like Hindi, Tamil, etc. and store it in our cache.
         })
     })```
  Secondly , when the input (like lang code isn't correct) -
+ 
      ```it('It should not  GET the translated word of the target language',(done)=>{
         chai.request(server)
         .get('/translate/Hello/hn') //  word : Hello ; totranslate : Hindi (hn) : wrong language code given
