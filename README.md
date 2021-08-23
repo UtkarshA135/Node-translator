@@ -26,3 +26,29 @@ but also other languages like Hindi, Tamil, etc. and store it in our cache.
 - For Example : ```localhost:8080\translate\Bonjour\en```
 - Above will result in "Hello" on the screen 
 
+# Testing
+- Used well known testing frameworks ```mocha and chai ``` to test the RESTful API.
+- Just run ``` npm test ``` to test the API.
+- Two types of test :
+  One where input is correct -
+  describe('GET /translate/:word/:language',()=>{
+    ```it("It should GET the translated word of the target language",(done)=>{
+        chai.request(server)
+        .get('/translate/Hello/hi') //  word : Hello ; totranslate : hindi(hi)
+        .end((err,response)=>{
+                response.should.have.status(200);
+                response.body.should.be.a('string');
+               
+                done();
+        })
+    })```
+ Secondly , when the input (like lang code isn't correct) -
+     ```it('It should not  GET the translated word of the target language',(done)=>{
+        chai.request(server)
+        .get('/translate/Hello/hn') //  word : Hello ; totranslate : Hindi (hn) : wrong language code given
+        .end((err,response)=>{
+                response.body.should.be.eql({});           
+                done();
+        })
+    }) ```
+- Assertion style used - ``` chai.should() ```
