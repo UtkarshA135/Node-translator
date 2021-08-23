@@ -41,15 +41,15 @@ but also other languages like Hindi, Tamil, etc. and store it in our cache.
                
                 done();
         })
-    })```
+    }) ```
  Secondly , when the input (like lang code isn't correct) -
  
-     ```it('It should not  GET the translated word of the target language',(done)=>{
+     ``` it('It should not  GET the translated word of the target language',(done)=>{
         chai.request(server)
         .get('/translate/Hello/hn') //  word : Hello ; totranslate : Hindi (hn) : wrong language code given
         .end((err,response)=>{
                 response.body.should.be.eql({});           
                 done();
         })
-    }) ```
+    })  ```
 - Assertion style used - ``` chai.should() ```
