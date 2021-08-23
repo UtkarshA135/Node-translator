@@ -70,6 +70,9 @@ but also other languages like Hindi, Tamil, etc. and store it in our cache.
  - I did JSON.stringify(obj) and store this as key
  - For value , I am storing ``` res.translation```
  - In built node-cache methods - 
+ 
    ```myCache.has(str)``` : Checks if cache has this particular word stored in memory and returns a boolean
+   
    ```myCache.get(str)``` : Retrieves the value from the cache 
-    ```myCache.set(str, res.translation)``` :  Stores a key-value pair in the cache memory.
+   
+   ```myCache.set(str, res.translation)``` :  Stores a key-value pair in the cache memory.
